@@ -1,0 +1,79 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+
+{% block ContenidoQueCambia %}
+
+   <!-- Masthead-->
+   <header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <!-- Page heading-->
+                    <h1 class="mb-5">Oximetros</h1>
+                    <h2 class="mb-5">Descripción, tipos y más</h2>
+                    <!-- Signup form-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+</header>
+
+  <!-- Image Showcases-->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/oximetro1.jpg' %}')"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>¿Qué es el Oximetro?</h2>
+                <p class="lead mb-0"> Es un dispositivo que permite medir el nivel de oxígeno corporal y el ritmo cardiaco. Uno de los efectos del coronavirus es, precisamente, la bajada en el nivel de oxígeno del cuerpo, una bajada que no es, en muchas ocasiones, perceptible por el paciente. </p>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/oximetro2.jpg' %}')"></div>
+            <div class="col-lg-6 my-auto showcase-text">
+                <h2>¿Cómo funciona un oxímetro?</h2>
+                <p class="lead mb-0"> Este dispositivo emite diferentes longitudes de onda de luz en el dedo. Estas ondas buscan la hemoglobina, que absorbe diferentes cantidades y longitudes de onda de luz según la cantidad de oxígeno que contenga </p>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/oximetro3.jpg' %}')"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>¿Importa qué dedo uso?</h2>
+                <p class="lead mb-0">La mayoría de los técnicos de la salud colocarán el dispositivo en los dedos índices, pero un estudio con 37 voluntarios reveló que las lecturas más altas provienen del dedo indice de la mano dominante..</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<h2>Lista de Oximetros</h2>
+    
+    
+<ul>
+    {% for oximetro in object_list %} 
+    <li>
+    
+    <p>Marca: {{oximetro.marca}}</p>
+
+    <p>
+    <a href="{% url 'DetailO' oximetro.id %}">Ver mas</a>
+    <a href="{% url 'EditO' oximetro.id %}">Editar</a>
+    <a href="{% url 'DeleteO' oximetro.id %}">Borrar</a>
+    </p>
+    </li>
+  
+    {% endfor %}
+</ul> 
+<br>        
+<!--  No funciona porque falta crear formularo de agregar vacuna-->
+<a href="{% url 'NewO' %}">AGREGAR OTRA Vacuna</a>
+
+{% endblock %}
+
+

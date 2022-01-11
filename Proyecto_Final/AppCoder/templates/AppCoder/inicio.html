@@ -1,0 +1,68 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+
+{% block ContenidoQueCambia %}
+
+   <!-- Masthead-->
+   <header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <!-- Page heading-->
+                    <h1 class="mb-5">BLOG COVID 19</h1>
+                    <h2 class="mb-5">Información que toda persona debe saber</h2>
+                    <!-- Signup form-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+</header>
+
+
+  <!-- Image Showcases-->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/covid1.jpg' %}')"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>¿Qué es el covid?</h2>
+                <p class="lead mb-0">a COVID-19 es la enfermedad causada por el nuevo coronavirus conocido como SARS-CoV-2. La OMS tuvo noticia por primera vez de la existencia de este nuevo virus el 31 de diciembre de 2019,</p>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/covid2.jpg' %}')"></div>
+            <div class="col-lg-6 my-auto showcase-text">
+                <h2>¿Cuáles son los sintomas?</h2>
+                <p class="lead mb-0"><strong> 1) Fiebre</strong> </p> 
+                <p class="lead mb-0"><strong> 1) Tos Seca</strong> </p> 
+                <p class="lead mb-0"><strong> 1) Cansancio</strong> </p> 
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/covid3.jpg' %}')"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>¿Qué ocurre si me contagio?</h2>
+                <p class="lead mb-0">Entre las personas que desarrollan síntomas, la mayoría (alrededor del 80%) se recuperan de la enfermedad sin necesidad de recibir tratamiento hospitalario. Alrededor del 15% desarrollan una enfermedad grave y requieren oxígeno y el 5% llegan a un estado crítico y precisan cuidados intensivos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<h1>Indice del blog:</h1>
+<h2 href="{% url 'vacunas' %}" style="color: blue;">Vacunas</h2>
+<a class="btn btn-primary btn-sm" href="{% url 'vacunas' %}">Ver mas sobre Vacunas</a>
+<h2 style="color:brown">Barbijos</h2>
+<a class="btn btn-primary btn-sm" href="{% url 'barbijos' %}">Ver mas sobre Barbijos</a>
+<h2 style="color: cornflowerblue;">Oximetro</h2>
+<a class="btn btn-primary btn-sm" href="{% url 'oximetros' %}">Ver mas sobre Oximetros</a>
+
+
+
+{% endblock %}

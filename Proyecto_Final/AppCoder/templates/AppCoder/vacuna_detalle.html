@@ -1,0 +1,69 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+
+{% block ContenidoQueCambia %}
+
+   <!-- Masthead-->
+   <header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <!-- Page heading-->
+                    <h1 class="mb-5">Vacunas</h1>
+                    <h2 class="mb-5">Descripción, tipos y más</h2>
+                    <!-- Signup form-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+</header>
+
+  <!-- Image Showcases-->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/bg-showcase-1.jpg' %}')"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>¿Cómo funcionan las vacunas?</h2>
+                <p class="lead mb-0">Las vacunas actúan mediante la simulación de los agentes infecciosos –virus, bacterias u otros microorganismos– que pueden causar una enfermedad. Esto “enseña” a nuestro sistema inmunitario a dar una respuesta rápida y eficaz frente al patógeno.</p>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/bg-showcase-2.jpg' %}')"></div>
+            <div class="col-lg-6 my-auto showcase-text">
+                <h2>Tipos de vacunas</h2>
+                <p class="lead mb-0"><strong> 1) Vacuna de ARN mensajero (ARNm)</strong> Ayuda producir la proteína de la espícula que se encuentra en la superficie del virus de la COVID-19.</p> 
+                <p class="lead mb-0"><strong> 2) Vacuna de vector viral</strong> El material genético del virus de la COVID-19 se coloca en una versión modificada de un virus diferente (vector viral).</p> 
+                <p class="lead mb-0"><strong> 3) Vacunas de subunidades proteicas</strong> Solo incluyen las partes de un virus que mejor estimulan al sistema inmunitario.</p> 
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/bg-showcase-3.jpg' %}')"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>¿Qué puede pasar si no nos vacunamos?</h2>
+                <p class="lead mb-0">En el caso de no vacunarnos, si tenemos contacto con el microorganismo causante de la infección podemos tener la enfermedad. Algunas de estas enfermedades pueden producir complicaciones importantes o incluso la muerte.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2>Detalle de las vacunas</h2>
+    
+<p>Proveedor: <i>{{ vacunas.proveedor }}</i></p>
+<p>Fecha de creacion: <i>{{vacunas.fecha_creacion}}</i></p>
+<p>Pais de origen: <i>{{vacunas.pais_origen}}</i></p>
+<p>Grado de dolor: <i>{{vacunas.grado_de_dolor}}</i></p>
+
+<br>        
+
+<a href="{% url 'List' %}">regresar</a>
+
+{% endblock %}
+
+

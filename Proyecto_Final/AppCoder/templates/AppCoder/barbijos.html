@@ -1,0 +1,62 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+
+{% block ContenidoQueCambia %}
+
+   <!-- Masthead-->
+   <header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <!-- Page heading-->
+                    <h1 class="mb-5">Barbijos</h1>
+                    <h2 class="mb-5">Descripción, tipos y más</h2>
+                    <!-- Signup form-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+</header>
+
+  <!-- Image Showcases-->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/barbija1.jpg' %}')"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>Importancia de los barbijos</h2>
+                <p class="lead mb-0">Los barbijos de tela está diseñada para atrapar las gotitas de respiración que se liberan cuando la persona que la usa habla, tose, o estornuda. Además, actúa como una barrera protectora para que quien la use no inhale las gotitas liberadas por otras personas.</p>
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/barbija2.jpg' %}')"></div>
+            <div class="col-lg-6 my-auto showcase-text">
+                <h2>Tipos de barbijos</h2>
+                <p class="lead mb-0"><strong> 1) Mèdicas: </strong> Mascarillas desechables de ajuste holgado. Sirven para proteger a las personas del contacto por gotitas y salpicaduras que pueden contener gérmenes.</p> 
+                <p class="lead mb-0"><strong> 2) N95: </strong> Ofrece más protección que una mascarilla médica porque filtra tanto las partículas grandes como las pequeñas cuando la persona que la usa inhala.</p> 
+                <p class="lead mb-0"><strong> 3) Tela: </strong> Las más eficaces son las que se fabrican con varias capas de tejido entrelazado firmemente, como el algodón.</p> 
+            </div>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('{% static 'AppCoder/assets/img/barbija3.jpg' %}')"></div>
+            <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                <h2>¿Cuál elegir</h2>
+                <p class="lead mb-0">Considere el tipo de mascarilla o mascarilla de respiración que debe usar según la situación. Elija siempre una mascarilla o mascarilla de respiración que sea cómoda y se ajuste bien, y úsela de manera correcta (de modo que le cubra la nariz y la boca)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<h2>Lista de principales barbijos desarrolladas</h2>
+<h1 style="color: blue;">Barbijos</h1>
+<a class="btn btn-primary btn-sm" href="{% url 'ListB' %}">Ver todos los tipos de barbijos</a>
+
+{% endblock %}
+
+
